@@ -24,7 +24,7 @@ class EmbeddingSim(nn.Module):
         y = x.matmul(weight.transpose(1, 0))
         if self.bias is not None:
             y += self.bias
-        return F.softmax(y)
+        return F.softmax(y, dim=-1)
 
     def extra_repr(self):
         return 'num_embeddings={}, bias={}'.format(

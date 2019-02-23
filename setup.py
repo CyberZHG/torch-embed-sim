@@ -12,7 +12,7 @@ with codecs.open('requirements.txt', 'r', 'utf8') as reader:
 
 setup(
     name='torch-embed-sim',
-    version='0.3.0',
+    version='0.3.1',
     packages=find_packages(),
     url='https://github.com/CyberZHG/torch-embed-sim',
     license='MIT',
