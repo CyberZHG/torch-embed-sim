@@ -21,7 +21,7 @@ class EmbeddingSim(nn.Module):
             torch.nn.init.zeros_(self.bias)
 
     def forward(self, x, weight):
-        y = x.matmul(weight.transpose(1, 0))
+        y = x.matmul(weight.transpose(1, 0).detach())
         if self.bias is not None:
             y += self.bias
         return F.softmax(y, dim=-1)
